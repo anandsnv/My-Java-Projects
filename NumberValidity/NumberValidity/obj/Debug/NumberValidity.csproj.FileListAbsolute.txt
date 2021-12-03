@@ -1,0 +1,6 @@
+C:\Users\Lenovo\source\repos\NumberValidity\NumberValidity\bin\Debug\NumberValidity.exe
+C:\Users\Lenovo\source\repos\NumberValidity\NumberValidity\bin\Debug\NumberValidity.pdb
+C:\Users\Lenovo\source\repos\NumberValidity\NumberValidity\obj\Debug\NumberValidity.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\NumberValidity\NumberValidity\obj\Debug\NumberValidity.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\NumberValidity\NumberValidity\obj\Debug\NumberValidity.exe
+C:\Users\Lenovo\source\repos\NumberValidity\NumberValidity\obj\Debug\NumberValidity.pdb

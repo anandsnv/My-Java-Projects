@@ -1,0 +1,5 @@
+C:\Users\Lenovo\source\repos\Excercise4\Excercise4\bin\Debug\Excercise4.exe
+C:\Users\Lenovo\source\repos\Excercise4\Excercise4\bin\Debug\Excercise4.pdb
+C:\Users\Lenovo\source\repos\Excercise4\Excercise4\obj\Debug\Excercise4.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Excercise4\Excercise4\obj\Debug\Excercise4.exe
+C:\Users\Lenovo\source\repos\Excercise4\Excercise4\obj\Debug\Excercise4.pdb

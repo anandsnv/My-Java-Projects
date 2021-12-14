@@ -11,6 +11,15 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "Microsoft.AspNet.Cors/5.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Web.Cors.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Cors.dll": {}
+        }
+      },
       "Microsoft.Data.Sqlite.Core/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -588,6 +597,18 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNet.Cors/5.2.7": {
+      "sha512": "r7qTj8SKzHT32F2mbB3qgE+6VUd2xILkGaq4LtMW+KP3dDAQmI//j+8Ku01I3D1GKZvB9PU8HTJPkaw7sxSLtQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.cors/5.2.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/System.Web.Cors.dll",
+        "microsoft.aspnet.cors.5.2.7.nupkg.sha512",
+        "microsoft.aspnet.cors.nuspec"
       ]
     },
     "Microsoft.Data.Sqlite.Core/6.0.0": {
@@ -1375,6 +1396,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Application >= 1.0.0",
+      "Microsoft.AspNet.Cors >= 5.2.7",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -1386,11 +1408,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Reactivities\\API\\API.csproj",
+      "projectUniqueName": "c:\\Users\\Lenovo\\Reactivities\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Lenovo\\Reactivities\\API\\API.csproj",
+      "projectPath": "c:\\Users\\Lenovo\\Reactivities\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Reactivities\\API\\obj\\",
+      "outputPath": "c:\\Users\\Lenovo\\Reactivities\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1404,15 +1426,14 @@
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\Reactivities\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Reactivities\\Application\\Application.csproj"
+            "c:\\Users\\Lenovo\\Reactivities\\Application\\Application.csproj": {
+              "projectPath": "c:\\Users\\Lenovo\\Reactivities\\Application\\Application.csproj"
             }
           }
         }
@@ -1427,6 +1448,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.AspNet.Cors": {
+            "target": "Package",
+            "version": "[5.2.7, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -1459,5 +1484,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Cors 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Cors",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

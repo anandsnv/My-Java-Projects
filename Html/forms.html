@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rgister Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Race Registration...</h1>
+    <h2>
+        "Everyone in life is looking for a certain rush. Racing is where I get mine."<br>
+                —John Trautmann, Olympic runner 
+    </h2>
+    <form action =" ">
+        <label for ="first">Fist Name</label>
+        <input type ="test"id="first" name ="firstname"placeholder="First Name" required>
+        <p>
+            <label for ="last">Last Name</label>
+            <input type ="test"id="last" name ="lastname"placeholder="Last Name">
+        </p>
+        <p>
+            <input type="radio" name="race" id="funrun"value ="funrun">
+            <label for="funrun">Fun Run 5K</label>
+        </p>
+        <p>
+            <input type="radio" name="race" id="half"value ="halfmarathon">
+            <label for="half">Half Marathon</label>
+        </p>
+        <p>
+            <input type="radio" name="race" id="full"value="fullmarathon">
+            <label for="full">Full Marathon</label>
+        </p>
+        <p>
+            <label for ="email">Email</label>
+            <input type ="email"id="email" name ="email"placeholder="eg:abc@gmail.com" required>
+        </p>
+        <p>
+            <label for ="pass">Password</label>
+            <input type ="password"id="pass" name ="pass"placeholder="password" required minlength="5" maxlength="10">
+        </p>
+        <p>
+            <label for="division">Select Age Group</label>
+            <select name="division" id="division">
+                <option value="kids">Under 18</option>
+                <option value=" adult">18-50</option>
+                <option value="seniors">50-100</option>
+            </select>
+        </p>
+        <p>
+            <button>Register</button>
+        </p>
+    </form>
+    <button>Exit</button>
+    
+</body>
+</html>

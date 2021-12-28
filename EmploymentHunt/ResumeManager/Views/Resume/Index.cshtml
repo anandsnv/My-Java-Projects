@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ResumeManager.Models.Applicant>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+.avatar{
+    vertical-align:middle;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+</style>
+
+@*<h1>Applicant Details</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+
+<div class= "container btn-group">
+    <div class = "col-10">
+        <h1>Applicants</h1>
+    </div>
+    <div class= "col-2 btn-group justify-content-end p-3">
+        <a asp-action="Create" class="btn btn-sm btn-success">Create New</a>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qualification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalExperience)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+             <td>
+                <img src="~/images/@item.PhotoUrl" alt="" class="avatar">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qualification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalExperience)
+            </td>
+            <td>
+                <div class="btn-group">
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm  btn-primary m1-1">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm  btn-danger m1-1">Delete </a>
+               </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

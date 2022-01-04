@@ -70,6 +70,17 @@
                         width="125" height="125" style="border:1px;margin-top:20px; "/>
                 </div>
             </div>
+            <div>
+           <div class="form-group">
+               <label for="ResumeFile" class="control-label"></label>
+               <div class = "custom-file">
+                   <input asp-for ="ResumeFile" class="custom-file-input" id="FLResumeFile" >
+                   <label class ="custom-file-label" for="FLResumeFile">Upload Resume</label>
+               </div>
+               <span onformchange="ResumeFile" class="text-danger"></span>
+
+           </div>
+           </div>
 
             <div class="col-md-12">
             <table id="ExpTable" class="table progress-bar-striped table-sm">

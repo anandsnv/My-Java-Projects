@@ -38,11 +38,18 @@ namespace ResumeManager.Models
         public virtual List<Experience> Experiences { get; set; } = new List<Experience>();//detail very important
 
 
-        public string PhotoUrl { get; set; }
+         public string PhotoUrl { get; set; }
 
         [Required(ErrorMessage = "Please choose the Profile Photo")]
         [Display(Name = "Profile Photo")]
         [NotMapped]
         public IFormFile ProfilePhoto { get; set; }
+        public string ResumeUrl { get; set; }
+        [Required(ErrorMessage = "Please choose the Resume ")]
+        [Display(Name = "ResumeFile")]
+        [NotMapped]
+        public IFormFile ResumeFile { get; set; }
+        
+
     }
-}
+ }

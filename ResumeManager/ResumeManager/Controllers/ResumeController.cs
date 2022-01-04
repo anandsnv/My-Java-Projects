@@ -37,6 +37,7 @@ namespace ResumeManager.Controllers
                 .Include(e => e.Experiences)
                 .Where(a => a.Name.Contains(SearchText) || a.Qualification.Contains(SearchText) || a.Gender.Contains(SearchText))
                 .ToList();
+               
                  return View(applicants);    
             }
             else
@@ -64,6 +65,8 @@ namespace ResumeManager.Controllers
 
             string uniqueFileName = GetUploadedFileName(applicant);
             applicant.PhotoUrl = uniqueFileName;
+            string unFileName=UploadedFileName(applicant);
+            applicant.ResumeUrl = unFileName;
 
             _context.Add(applicant);
             _context.SaveChanges();
@@ -89,13 +92,30 @@ namespace ResumeManager.Controllers
             return uniqueFileName;
         }
 
+        private string UploadedFileName(Applicant applicant)
+        {
+            string unFileName = null;
+
+            if (applicant.ResumeFile != null)
+            {
+                string uploadsFolder = Path.Combine(_webHost.WebRootPath, "ResumeFile");
+                unFileName = Guid.NewGuid().ToString() + "_" + applicant.ResumeFile.FileName;
+                string filePath = Path.Combine(uploadsFolder, unFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    applicant.ResumeFile.CopyTo(fileStream);
+                }
+            }
+            return unFileName;
+        }
+
 
         public IActionResult Details(int Id)
         {
             Applicant applicant=_context.Applicants
                 .Include(e =>  e.Experiences)
                 .Where(a => a.Id==Id).FirstOrDefault();
-            
+           
             return View(applicant);
                 
         }

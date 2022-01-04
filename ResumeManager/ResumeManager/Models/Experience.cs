@@ -14,9 +14,9 @@ namespace ResumeManager.Models
         [Key]
         public int ExperienceId { get; set; }
 
-        [ForeignKey("Applicant")]//very important
+        [ForeignKey("Applicant")]
         public int ApplicantId { get; set; }
-        public virtual Applicant Applicant { get; private set; } //very important 
+        public virtual Applicant Applicant { get; private set; } 
 
         public string CompanyName { get; set; }
         public string Designation { get; set; }
